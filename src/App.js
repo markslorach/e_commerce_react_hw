@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ShopContainer from "./containers/ShopContainer";
+import Basket from "./components/Basket";
+import NavBar from "./components/NavBar";
+import productData from "./data/productData";
 
 function App() {
+  const [basket, setBasket] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar basket={basket} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ShopContainer
+              basket={basket}
+              setBasket={setBasket}
+              products={productData}
+            />
+          }
+        />
+        <Route path="/basket" element={<Basket basket={basket} />} />
+      </Routes>
+    </Router>
   );
 }
 
