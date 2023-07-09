@@ -12,7 +12,6 @@ const ProductList = ({ products, addToBasket }) => {
 
   return (
     <div>
-      <h2>Skates</h2>
       <div className="productsContainer">
       {allProducts}
       </div>

@@ -7,14 +7,19 @@ const NavBar = ({ basket }) => {
 
   return (
     <nav>
+    <div className='logo'>
+      <h1>SkateShop.</h1>
+    </div>
+    <div className='nav-links'>
       <ul>
         <li>
-          <Link to="/">Shop</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/basket">Basket ({itemCount})</Link>
         </li>
       </ul>
+      </div>
     </nav>
   );
 };

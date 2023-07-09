@@ -9,7 +9,6 @@ const ShopContainer = ({ basket, setBasket, products }) => {
 
   return (
     <div>
-      <h1>Break 'a' Leg!</h1>
       <ProductList products={products} addToBasket={addToBasket} />
     </div>
   );
