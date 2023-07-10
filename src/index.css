@@ -51,10 +51,26 @@ li {
 
 .logo {
   width: 100px;
+  margin-right: 30px;
 }
 
 .nav-links {
-  width: 200px;
+  color: rgb(14, 14, 14);
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.nav-links:hover {
+  color: rgb(65, 65, 65);
+}
+
+.nav-links:active {
+  color: black;
+}
+
+span {
+  color:#CB4C4E
 }
 
 .price {
@@ -71,9 +87,9 @@ li {
 }
 
 .add-to-basket:hover {
-  background-color: #f5f5f5;
+  transform: scale(1.03);
 }
 
 .add-to-basket:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }

@@ -10,13 +10,13 @@ const NavBar = ({ basket }) => {
     <div className='logo'>
       <h1>SkateShop.</h1>
     </div>
-    <div className='nav-links'>
+    <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link className='nav-links' to="/">Home</Link>
         </li>
         <li>
-          <Link to="/basket">Basket ({itemCount})</Link>
+          <Link className='nav-links' to="/basket">Basket <span>({itemCount})</span></Link>
         </li>
       </ul>
       </div>
